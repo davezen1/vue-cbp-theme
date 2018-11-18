@@ -10,6 +10,7 @@
     "test:unit": "vue-cli-service test:unit"
   },
   "dependencies": {
+    "cbp-theme": "^1.10.0",
     "register-service-worker": "^1.0.0",
     "vue": "^2.5.17"
   },
