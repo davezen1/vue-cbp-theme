@@ -13,7 +13,7 @@
                 </div>
                 <div id="navbar-user-info" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav navbar-left">
-                        <li class="dropdown">
+                        <li class="dropdown" @click="toggleDropdown($event)">
                             <a class="dropdown-toggle" data-toggle="dropdown" role="button" href="#">
                   {{appName}}<span class="caret"></span> <!-- Your application name goes here!!!-->
                 </a>
@@ -44,7 +44,7 @@
                   <span class="hidden-sm">Feedback</span>
                 </a>
                         </li>
-                        <li data-toggle="hover" class="dropdown">
+                        <li data-toggle="hover" class="dropdown" @click="toggleDropdown($event)">
                             <a href="#" data-toggle="dropdown" class="dropdown-toggle">
                   <span class="fa fa-user"></span>
                   <span class="hidden-sm" title="FIRST.LAST@CBP.DHS.GOV">First Last Name</span>
@@ -75,6 +75,11 @@ export default {
   name: "Header",
   props: {
     appName: String
+  },
+  methods: {
+    toggleDropdown(event) {    
+        event.currentTarget.classList.toggle('open')
+    }
   }
 };
 </script>

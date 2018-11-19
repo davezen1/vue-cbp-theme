@@ -1,4 +1,3 @@
-import 'cbp-theme/dist/cbp-theme.esm5.js'
 import 'cbp-theme/dist/cbp-theme.min.css'
 
 import Vue from 'vue'
